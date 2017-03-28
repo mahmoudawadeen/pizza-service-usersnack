@@ -1,0 +1,27 @@
+.box-header h4.box-title {
+    display: block;
+}
+
+.product-title h1 {
+    display: inline-block;
+}
+
+.product-info h1 {
+    text-align: center;
+}
+
+.product-info p {
+    display: inline-block;
+}
+
+.product-info button.btn-primary,
+.remove-button button {
+    padding: 1px 12px 0;
+}
+
+.remove-button {
+    margin-bottom: 5px;
+}
+.product-info img{
+    margin-bottom: 20px;
+}

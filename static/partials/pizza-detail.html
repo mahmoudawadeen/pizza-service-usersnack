@@ -1,0 +1,27 @@
+<div class="product-info clearfix">
+    <h1>{{ pizza.name }}</h1>
+
+    <img class="pull-right" src="/static/img/{{ pizza.img }}" alt="{{ pizza.name }}">
+    <h2>Ingredients: {{ pizza.ingredients.join(", ") }}</h2>
+    <h3>Price: USD {{ pizza.price }}</h3>
+    <p>Please select extras: </p>
+    <select ng-model="default" ng-options="extra as extra.name for extra in extras">
+    </select>
+    <button class="btn btn-primary " ng-click='add()' ng-disabled="disabled">
+        add
+    </button>
+    <div class="remove-button" ng-repeat="extra in selected track by $index">
+        <button class="btn btn-danger " ng-click="remove($index)"
+        > {{ extra.name }} <span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Name" ng-model="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Address" ng-model="address" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="email" placeholder="Email" ng-model="email" class="form-control">
+    </div>
+    <button class="btn btn-success " ng-click="order()">Order</button>
+</div>
