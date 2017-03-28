@@ -14,7 +14,7 @@ angular.module('app', ['pizzaServices','ngRoute'])
                     controller: PizzaDetailController
                 })
                 .otherwise({
-                    redirectTo: '/'
+                    redirectTo: '/pizza'
                 });
             $locationProvider.html5Mode({
                 enabled: true,

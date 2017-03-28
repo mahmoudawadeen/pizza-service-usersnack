@@ -31,13 +31,10 @@ def pizza(pizza_id):
 
 
 @app.route('/pizza')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-
-@app.route('/')
-def admin():
-    return render_template('index.html')
 
 
 @app.route('/api/pizza')
