@@ -3,7 +3,7 @@
  */
 angular.module('pizzaServices', ['ngResource'])
     .factory('Pizza', function($resource) {
-        return $resource('http://localhost:5000/api/pizza/:pizzaId');
+        return $resource('/api/pizza/:pizzaId');
     }).factory('Extras', function($resource) {
-    return $resource('http://localhost:5000/api/extras');
+    return $resource('/api/extras');
 });
